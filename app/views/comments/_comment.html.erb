@@ -1,0 +1,6 @@
+<% if comment.persisted? %>
+<div class="comment" id="comment-<%= comment.id %>">
+<%= simple_format(comment.body) %>
+<em><%= comment.created_at %></em> | <%= link_to('Mark as spam', song_comment_path(comment.song, comment), remote: true, method: :delete) %>
+</div>
+<% end %>

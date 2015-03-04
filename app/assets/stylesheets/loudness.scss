@@ -1,0 +1,46 @@
+body {
+  font-family: monospace;
+  color: #fff;
+  background: #444;
+}
+
+.container {
+  margin: 4em auto;
+}
+
+h1 {
+  font: 48px/1 monospace;
+}
+
+input, textarea {
+  display: block;
+  font-family: monospace;
+  font-weight: bold;
+  color: #fe7eaf;
+}
+
+a {
+  color: #ddd;
+}
+
+button, input[type=submit] {
+  background: #fe7eaf;
+}
+
+.song-row {
+  margin: 2em 0;
+  padding-bottom: 1em;
+  border-top: 6px dashed #ddd;
+
+  .columns {
+    padding-top: 2em;
+  }
+
+  h2, h4 {
+    margin-top: 0;
+  }
+
+  .player {
+    padding-top: 6em;
+  }
+}

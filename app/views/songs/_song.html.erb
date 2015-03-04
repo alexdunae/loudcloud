@@ -1,0 +1,17 @@
+<div class="row song-row">
+  <div class="six columns">
+    <h4><%= link_to song.title, song %></h4>
+
+    <%= song.url.html_safe %>
+
+    <p><%= link_to 'Like', song_likes_path(song), method: :post, remote: true %> (<span id="song-<%= song.id %>-likes"><%= song.like_count %></span>)</p>
+  </div>
+  <div class="six columns">
+    <h4>Comments</h4>
+    <%= render 'comments/form', comment: song.comments.new %>
+
+    <div id='song-<%= song.id %>-comment-list' class='comment-list'>
+      <%= render song.comments %>
+    </div>
+  </div>
+</div>
