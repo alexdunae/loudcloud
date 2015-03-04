@@ -20,9 +20,9 @@ def soundcloud_html(data)
 end
 
 soundcloud_data.each do |data|
+  puts "Creating #{data.title}"
   song = Song.create!(
     title: data.title,
     url: soundcloud_html(data)
   )
-  ap song
 end
