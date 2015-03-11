@@ -2,9 +2,12 @@
   <div class="six columns">
     <h4><%= link_to song.title, song %></h4>
 
-    <%= song.url.html_safe %>
+    <%= song.embed_code.html_safe %>
 
-    <p><%= link_to 'Like', song_likes_path(song), method: :post, remote: true %> (<span id="song-<%= song.id %>-likes"><%= song.like_count %></span>)</p>
+    <p>
+      <%= link_to 'Like', song_likes_path(song), method: :post, remote: true %>
+      (<span id="song-<%= song.id %>-likes"><%= song.like_count %></span>)
+    </p>
   </div>
   <div class="six columns">
     <h4>Comments</h4>

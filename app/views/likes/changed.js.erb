@@ -1,1 +1,6 @@
-$('#song-<%= current_song.id %>-likes').text('<%= current_song.like_count %>')
+var songSpan = $('#song-<%= current_song.id %>-likes');
+
+songSpan.text('<%= current_song.like_count %>');
+
+
+// $('#song-<%= current_song.id %>-likes').text('<%= current_song.like_count %>');
