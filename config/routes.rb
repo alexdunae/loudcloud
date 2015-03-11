@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :songs do
-    resources :comments
-    resources :likes
+  resources :songs, only: [:index] do
+    resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create]
   end
 
   root 'songs#index'
